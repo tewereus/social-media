@@ -1,0 +1,6 @@
+/server/node_modules
+/server/.env
+
+
+/user-services/node_modules
+/user-services/.env
