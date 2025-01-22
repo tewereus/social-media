@@ -25,4 +25,4 @@ const generateToken = async (user) => {
   return { accessToken, refreshToken };
 };
 
-module.exports = { generateToken };
+module.exports = generateToken;

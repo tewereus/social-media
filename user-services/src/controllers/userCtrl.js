@@ -1,6 +1,7 @@
 const logger = require("../utils/logger");
 const { validateRegistration } = require("../utils/validation");
 const User = require("../models/userModel");
+const generateToken = require("../utils/generateToken");
 
 const register = async (req, res) => {
   logger.info("Registration endpoint reached");
@@ -25,5 +26,21 @@ const register = async (req, res) => {
     user = new User({ username, email, password });
     await user.save();
     logger.info("User successfully created ");
-  } catch (error) {}
+
+    const { accessToken, refreshToken } = generateToken(user);
+    res.status(201).json({
+      success: true,
+      message: "user registered successfully",
+      accessToken,
+      refreshToken,
+    });
+  } catch (error) {
+    logger.error("Registration error occured", e);
+    res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
+  }
 };
+
+module.exports = { register };
