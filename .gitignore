@@ -4,3 +4,12 @@
 
 /user-services/node_modules
 /user-services/.env
+
+/post-service/node_modules
+/post-service/.env
+
+/search-service/node_modules
+/search-service/.env
+
+/media-service/node_modules
+/media-service/.env
