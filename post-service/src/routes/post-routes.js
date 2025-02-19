@@ -5,7 +5,7 @@ const {
   getPost,
   deletePost,
 } = require("../controllers/post-controller");
-const { authenticateRequest } = require("../middleware/authMiddleware");
+const { authenticateRequest } = require("../middlewares/authMiddlware");
 
 const router = express();
 

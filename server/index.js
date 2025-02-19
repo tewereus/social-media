@@ -5,10 +5,10 @@ const Redis = require("ioredis");
 const helmet = require("helmet");
 const { rateLimit } = require("express-rate-limit");
 const { RedisStore } = require("rate-limit-redis");
-const logger = require("./utils/logger");
+const logger = require("./src/utils/logger");
 const proxy = require("express-http-proxy");
-const errorHandler = require("./middlewares/errorhandler");
-const { validateToken } = require("./middlewares/authMiddleware");
+const errorHandler = require("./src/middlewares/errorhandler");
+const { validateToken } = require("./src/middlewares/authMiddleware");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -66,7 +66,7 @@ app.use(
     },
     userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
       logger.info(
-        `Response received from Identity service: ${proxyRes.statusCode}`
+        `Response received from User service: ${proxyRes.statusCode}`
       );
 
       return proxyResData;
@@ -148,11 +148,11 @@ app.use(errorHandler);
 app.listen(PORT, () => {
   logger.info(`API Gateway is running on port ${PORT}`);
   logger.info(
-    `Identity service is running on port ${process.env.USER_SERVICE_URL}`
+    `User service is running on port ${process.env.USER_SERVICE_URL}`
   );
-  //   logger.info(
-  //     `Post service is running on port ${process.env.POST_SERVICE_URL}`
-  //   );
+  logger.info(
+    `Post service is running on port ${process.env.POST_SERVICE_URL}`
+  );
   //   logger.info(
   //     `Media service is running on port ${process.env.MEDIA_SERVICE_URL}`
   //   );

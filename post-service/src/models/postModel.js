@@ -12,7 +12,7 @@ var postSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    mediaUrls: [
+    mediaIds: [
       {
         type: String,
       },

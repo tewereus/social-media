@@ -1,0 +1,3 @@
+{"code":"ECONNREFUSED","level":"error","message":"Error connecting to rabbit mq","service":"post-service","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-19T08:45:47.828Z"}
+{"level":"info","message":"Post service running on port 3002","service":"post-service","timestamp":"2025-02-19T08:45:47.850Z"}
+{"level":"info","message":"Connected to mongodb","service":"post-service","timestamp":"2025-02-19T08:45:47.877Z"}

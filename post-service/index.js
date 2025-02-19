@@ -4,10 +4,10 @@ const mongoose = require("mongoose");
 const Redis = require("ioredis");
 const cors = require("cors");
 const helmet = require("helmet");
-const postRoutes = require("./routes/post-routes");
-const errorHandler = require("./middlewares/errorHandler");
-const logger = require("./utils/logger");
-const { connectToRabbitMQ } = require("./utils/rabbitmq");
+const postRoutes = require("./src/routes/post-routes");
+const errorHandler = require("./src/middlewares/errorHandler");
+const logger = require("./src/utils/logger");
+const { connectToRabbitMQ } = require("./src/utils/rabbitmq");
 
 const app = express();
 const PORT = process.env.PORT || 3002;
