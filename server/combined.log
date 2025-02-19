@@ -1,3 +1,6 @@
 {"level":"info","message":"API Gateway is running on port 3000","service":"server","timestamp":"2025-02-19T08:48:59.047Z"}
 {"level":"info","message":"Identity service is running on port http://localhost:3001","service":"server","timestamp":"2025-02-19T08:48:59.053Z"}
 {"level":"info","message":"Post service is running on port http://localhost:3002","service":"server","timestamp":"2025-02-19T08:48:59.054Z"}
+{"level":"info","message":"API Gateway is running on port 3000","service":"server","timestamp":"2025-02-19T08:49:17.511Z"}
+{"level":"info","message":"User service is running on port http://localhost:3001","service":"server","timestamp":"2025-02-19T08:49:17.517Z"}
+{"level":"info","message":"Post service is running on port http://localhost:3002","service":"server","timestamp":"2025-02-19T08:49:17.518Z"}
